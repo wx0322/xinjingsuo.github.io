@@ -1,0 +1,84 @@
+---
+layout: default
+category: home
+full_title: XinJingSuo
+---
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+  </ol>
+  <div itemscope itemtype="http://schema.org/ImageObject">
+    <div class="carousel-inner" role="listbox">
+      <div class="item active"><img itemprop="image" src="/images/home/billboard.jpg" alt="Sunshine"></div>
+      <div class="item"><img itemprop="image" src="/images/home/billboard-1.jpg" alt="Sunshine"></div>
+      <div class="item"><img itemprop="image" src="/images/home/billboard-2.jpg" alt="Sunshine"></div>
+      <div class="item"><img itemprop="image" src="/images/home/billboard-3.jpg" alt="Sunshine"></div>
+      <div class="item"><img itemprop="image" src="/images/home/billboard-4.jpg" alt="Sunshine"></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="fa fa-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">上一个</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">下一个</span>
+  </a>
+</div>
+<div class="border mt60 pb40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div itemscope itemtype="http://schema.org/Organization">
+          <h2 class="title custom"><span itemprop="name">关于我们</span></h2>
+          <p class="lead smaller text-justify"><span itemprop="description">公司简介第一段.</span></p>
+          <p class="lead smaller text-justify"><span itemprop="description">公司简介第二段.</span></p>
+          <p class="lead smaller text-justify"><span itemprop="description">公司简介第三段.</span> <a itemprop="url" href="{{ site.url }}/about/">详情</a></p>
+        </div>
+        <div class="mb5"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb10"></div>
+        <a data-fancybox="Sunshine Video" href="https://vimeo.com/250449830"><img src="/images/home/about-video.jpg" alt="Sunshine Video" class="img-responsive center-block"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray border pt65 pb30">
+  <div class="container">
+    <header class="title-block text-center">
+      <h2 class="title text-center custom mb25">公司产品</h2>
+    </header>
+    <div class="row">
+      {% include allproducts.html %}
+    </div>
+  </div>
+</div>
+<div class="mb50"></div>
+<div class="container">
+  <h2 class="title text-center custom mb25">最近新闻</h2>
+  <div class="blog-row">
+    <div id="blog-item-container" class="max-col-4">{% for post in site.categories["news"] limit:4 %}
+      <article class="entry entry-grid">
+        <div itemscope itemtype="http://schema.org/Article">
+          <div class="entry-media">
+            <figure><a itemprop="url" href="{{ site.url }}{{ post.url }}"><img itemprop="thumbnailUrl" src="/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></a></figure>
+            <div class="entry-meta">
+              <span itemprop="dateCreated"><i class="fa fa-calendar"></i> {{ post.date | date:"%d %b %Y" }}</span>
+              <a><i class="fa fa-tag"></i> {{ post.keywords }}</a>
+            </div>
+          </div>
+          <h2 class="entry-title"><i class="fa fa-file-image-o"></i><a itemprop="url" href="{{ site.url }}{{ post.url }}"><span itemprop="headline">{{ post.title }}</span></a></h2>
+          <div class="entry-content">
+            <p><span itemprop="description">{{ post.description }}</span></p>
+            <a itemprop="url" href="{{ site.url }}{{ post.url }}" class="readmore">更多<i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+      </article>{% endfor %}
+    </div>
+  </div>
+</div>
