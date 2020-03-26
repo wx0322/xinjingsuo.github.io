@@ -73,47 +73,31 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">公司产品<span class="angle"></span></a>
                   <div class="dropdown-menu megamenu" role="menu">
                     <div class="container">
-                      <div class="row">
-                        <div class="col-sm-3 hidden-xs" align="center">
-                          <img src="/images/assets/products-nav.png" class="img-responsive" alt="Sunshine Products">
+                        <div class="row">
+                            <div class="col-sm-3 hidden-xs" align="center">
+                                <img src="/images/assets/products-nav.png" class="img-responsive" alt="Sunshine Products">
+                            </div>
+                            <div class="col-sm-3">
+                                <ul>
+                                    <li><a href="{{ site.url }}/rework-station/">Rework Station</a></li>
+                                    <li><a href="{{ site.url }}/bishitantou/">笔试探头</a></li>
+                                    <li><a href="{{ site.url }}/danjinzhitantou/">单晶直探头</a></li>
+                                    <li><a href="{{ site.url }}/ruanmotantou/">软膜探头</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul>
+                                    <li><a href="{{ site.url }}/shuangjing/">双晶</a></li>
+                                    <li><a href="{{ site.url }}/xiaoshuangjingtantou/">小双晶探头</a></li>
+                                    <li><a href="{{ site.url }}/xietantou/">斜探头3</a></li>
+                                    <li><a href="{{ site.url }}/yanshikuaitantou/">延时块探头</a></li>
+                                </ul>
+                            </div>            
                         </div>
-                        <div class="col-sm-3">
-                            <ul>
-                                <li><a href="{{ site.url }}/rework-station/">Rework Station</a></li>
-                                <li><a href="{{ site.url }}/bishitantou/">笔试探头</a></li>
-                                <li><a href="{{ site.url }}/danjinzhitantou/">单晶直探头</a></li>
-                                <li><a href="{{ site.url }}/ruanmotantou/">软膜探头</a></li>
-                                <li><a href="{{ site.url }}/shuangjing/">双晶</a></li>
-                                <li><a href="{{ site.url }}/xiaoshuangjingtantou/">小双晶探头</a></li>
-                                <li><a href="{{ site.url }}/xietantou/">斜探头3</a></li>
-                                <li><a href="{{ site.url }}/yanshikuaitantou/">延时块探头</a></li>
-                            </ul>
-                        </div>
-                        <!-- <div class="col-sm-3">
-                          <ul>
-                            <li><a href="{{ site.url }}/maintenance-tools/">Maintenance Tools</a></li>
-                            <li><a href="{{ site.url }}/mobile-phone-battery/">Mobile phone battery</a></li>
-                            <li><a href="{{ site.url }}/soldering-consumable/">Soldering Consumable</a></li>
-                            <li><a href="{{ site.url }}/cleaning-consumable/">Cleaning Consumable</a></li>
-                            <li><a href="{{ site.url }}/lcd-repair-consumable/">LCD Repair Consumable</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-3">
-                          <ul>
-                            <li><a href="{{ site.url }}/other-consumable/">Other Consumable</a></li>
-                            <li><a href="{{ site.url }}/digital-series/">Digital Series</a></li>
-                            <li><a href="{{ site.url }}/software-series/">Software Series</a></li>
-                            <li><a href="{{ site.url }}/marking-machine/">Marking Machine</a></li>
-                            <li><a href="{{ site.url }}/other/">Other</a></li>
-                          </ul>
-                        </div> -->
-                      </div>
                     </div>
                   </div>
-                </li>
-                <!-- <li class="{% if page.category == 'app' %}active{% endif %}"><a href="{{ site.url }}/app/">App</a></li> -->
-                <li class="{% if page.category == 'news' %}active{% endif %}"><a href="{{ site.url }}/news/">新闻</a></li>
-                <!-- <li class="{% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">About Sunshine</a></li> -->
+                </li>                
+                <li class="{% if page.category == 'news' %}active{% endif %}"><a href="{{ site.url }}/news/">新闻</a></li>                
                 <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">联系我们</a></li>
               </ul>
             </div>
